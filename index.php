@@ -8,12 +8,11 @@ echo "Welcome to my stateless web frontend.<br>\n";
 
 
 
-if (getenv("MYSQL_SERVICE_HOST"))  {
-	$dbhost = getenv("MYSQL_SERVICE_HOST");
-	$dbport = getenv("MYSQL_SERVICE_PORT");
-	$dbuser = getenv("DATABASE_USER");
-	$dbpwd = getenv("DATABASE_PASSWORD");
-	$dbname = getenv("DATABASE_NAME");
+if (gethostbyname("mariadb")!="mariadb")  {
+        $dbhost = "mariadb";
+        $dbuser = "root";
+        $dbpwd = "mypassword";
+        $dbname = "mydatabase";
 
 	$connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 	if ($connection->connect_errno)  {
