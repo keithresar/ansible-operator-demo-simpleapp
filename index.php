@@ -24,7 +24,7 @@ if (gethostbyname("mariadb")!="mariadb")  {
 
 
 	// Get current version
-	$rs = $connection->query("select cur_version from version");
+	$rs = $connection->query("select MAX(cur_version) as cur_version from version");
 	if (!mysqli_num_rows($rs))  $row['cur_version'] = 0;
 	else  $row = $rs->fetch_array(MYSQLI_ASSOC);
 	print "Currently executing stateful data <span style='display:inline-block;background-color:yellow;padding:.2em 1em;'>version ".$row['cur_version']."</span><br>\n";
