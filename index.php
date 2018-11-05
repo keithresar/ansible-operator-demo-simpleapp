@@ -18,8 +18,9 @@ if (gethostbyname("mariadb")!="mariadb")  {
 	if ($connection->connect_errno)  {
 	    printf("Connect failed: %s\n", $mysqli->connect_error);
 	    exit();
-	}// DDL blind creation
-	$rs = $connection->query("create table version  ( cur_version int not null, primary key (cur_version))");
+	}
+	// DDL blind creation
+	$rs = $connection->query("create table if not exists version  ( cur_version int not null, primary key (cur_version))");
 
 
 	// Get current version
