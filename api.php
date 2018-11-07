@@ -1,5 +1,6 @@
 <?php
 
+error_reporting(0);
 
 if (gethostbyname("mariadb")!="mariadb")  {
         $dbhost = "mariadb";
@@ -9,8 +10,8 @@ if (gethostbyname("mariadb")!="mariadb")  {
 
     $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
     if ($connection->connect_errno)  {
-        printf("Connect failed: %s\n", $mysqli->connect_error);
-        exit();
+        http_response_code(425);
+        exit;
     }
     // DDL blind creation
     $rs = $connection->query("create table if not exists version  ( cur_version int not null, primary key (cur_version))");
