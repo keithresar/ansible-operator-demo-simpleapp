@@ -113,7 +113,7 @@ if (gethostbyname("mariadb")!="mariadb")  {
   <hgroup class="speech-bubble" style="width:10em;padding:.5em;position: absolute;right: 2em;top: 1em;">
     <h1>Thar Be Alone!</h1>
     <h2>No stateful data available</h2>
-    <h2>Serving fgrom pod <b><?php echo getenv('HOSTNAME');?></b>.</h2>
+    <h2>Serving from pod <b><?php echo getenv('HOSTNAME');?></b>.</h2>
 
   </hgroup>
 </div>
