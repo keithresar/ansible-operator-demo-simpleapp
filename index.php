@@ -95,7 +95,6 @@ if (gethostbyname("mariadb")!="mariadb")  {
 }
 
 
-//$state = "Currently executing stateful data <span style='display:inline-block;background-color:yellow;padding:.2em 1em;color:black'>version 8</span><br>\n";
 
 ?>
 
