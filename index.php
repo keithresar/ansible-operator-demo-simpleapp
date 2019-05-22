@@ -99,8 +99,8 @@ if (gethostbyname("mariadb")!="mariadb")  {
 ?>
 
 <?php if ($state)  { ?>
-<div style="position:relative;background-position:center;background-repeat:no-repeat;background-size:cover;width:100%;height:100%;background-image: url('man_hut.png'); ">
-  <hgroup class="speech-bubble" style="width:13em;padding:.5em;position: absolute;left: 2em;top: 1em;">
+<div style="position:relative;background-position:center;background-repeat:no-repeat;background-size:cover;width:100%;height:100%;background-image: url('compassman.png'); ">
+  <hgroup class="speech-bubble" style="background:rgb(255, 88, 80);width:13em;padding:.5em;position: absolute;right: 2em;bottom: 1em;">
     <h1>Look, No Dragons!</h1>
     <h2><?php echo $state;?></h2>
 
@@ -108,7 +108,7 @@ if (gethostbyname("mariadb")!="mariadb")  {
 </div>
 
 <?php }  else  { ?>
-<div style="position:relative;background-position:center;background-repeat:no-repeat;background-size:cover;width:100%;height:100%;background-image: url('man_boat.png'); ">
+<div style="position:relative;background-position:center;background-repeat:no-repeat;background-size:cover;width:100%;height:100%;background-image: url('compassman.png'); ">
   <hgroup class="speech-bubble" style="width:10em;padding:.5em;position: absolute;right: 2em;top: 1em;">
     <h1>Thar Be Alone!</h1>
     <h2>No stateful data available</h2>
